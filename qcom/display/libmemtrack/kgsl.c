@@ -105,13 +105,21 @@ int kgsl_memtrack_get_memory(pid_t pid, enum memtrack_type type,
             continue;
         }
 
+        if (size == 0)
+            return -EINVAL;
+
+        if (unaccounted_size + size < size)
+            return -ERANGE;
+
         if (type == MEMTRACK_TYPE_GL && strcmp(line_type, "gpumem") == 0) {
 
             if (flags[5] == 'Y') {
+                if (accounted_size + size < accounted_size)
+                    return -ERANGE;
+
                 accounted_size += mapsize;
                 unaccounted_size += size - mapsize;
-            }
-            else
+            } else
                 unaccounted_size += size;
 
         } else if (type == MEMTRACK_TYPE_GRAPHICS && strcmp(line_type, "ion") == 0) {
