@@ -21,6 +21,12 @@ LOCAL_MODULE                  := copybit.$(TARGET_BOARD_PLATFORM)
 LOCAL_LICENSE_KINDS           := SPDX-license-identifier-Apache-2.0 SPDX-license-identifier-BSD legacy_not_a_contribution
 LOCAL_LICENSE_CONDITIONS      := by_exception_only not_allowed notice
 LOCAL_NOTICE_FILE             := $(LOCAL_PATH)/NOTICE
+
+ifneq ($(TARGET_IS_HEADLESS), true)
+LOCAL_MODULE_PATH_32          := $(TARGET_OUT_VENDOR)/lib
+LOCAL_MODULE_PATH_64          := $(TARGET_OUT_VENDOR)/lib64
+endif
+
 LOCAL_MODULE_RELATIVE_PATH    := hw
 LOCAL_PROPRIETARY_MODULE      := true
 LOCAL_MODULE_TAGS             := optional
