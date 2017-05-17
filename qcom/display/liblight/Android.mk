@@ -24,12 +24,7 @@ LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_CFLAGS := $(common_flags) -DLOG_TAG=\"qdlights\"
 LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
 LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
-
-ifneq ($(TARGET_IS_HEADLESS), true)
-LOCAL_MODULE_PATH_32          := $(TARGET_OUT_VENDOR)/lib
-LOCAL_MODULE_PATH_64          := $(TARGET_OUT_VENDOR)/lib64
-endif
-
+LOCAL_VENDOR_MODULE           := true
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_NOTICE_FILE := $(LOCAL_PATH)/NOTICE
 LOCAL_MODULE_TAGS := optional

@@ -7,12 +7,7 @@ LOCAL_PROPRIETARY_MODULE      := true
 LOCAL_LICENSE_KINDS           := SPDX-license-identifier-BSD
 LOCAL_LICENSE_CONDITIONS      := notice
 LOCAL_MODULE_TAGS             := optional
-
-ifneq ($(TARGET_IS_HEADLESS), true)
-LOCAL_MODULE_PATH_32          := $(TARGET_OUT_VENDOR)/lib
-LOCAL_MODULE_PATH_64          := $(TARGET_OUT_VENDOR)/lib64
-endif
-
+LOCAL_VENDOR_MODULE           := true
 LOCAL_HEADER_LIBRARIES        := display_headers generated_kernel_headers
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libui libbinder libqservice
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdutils\" -Wno-sign-conversion -Wno-float-conversion
@@ -31,12 +26,7 @@ LOCAL_SRC_FILES                 := qdMetaData.cpp qd_utils.cpp
 LOCAL_CFLAGS                    := $(common_flags)
 LOCAL_CFLAGS                    += -DLOG_TAG=\"DisplayMetaData\" -Wno-sign-conversion
 LOCAL_MODULE_TAGS               := optional
-
-ifneq ($(TARGET_IS_HEADLESS), true)
-LOCAL_MODULE_PATH_32          := $(TARGET_OUT_VENDOR)/lib
-LOCAL_MODULE_PATH_64          := $(TARGET_OUT_VENDOR)/lib64
-endif
-
+LOCAL_VENDOR_MODULE           := true
 LOCAL_MODULE                    := libqdMetaData
 LOCAL_PROPRIETARY_MODULE        := true
 LOCAL_LICENSE_KINDS             := SPDX-license-identifier-BSD
@@ -51,12 +41,7 @@ LOCAL_HEADER_LIBRARIES          := display_headers generated_kernel_headers
 LOCAL_SRC_FILES                 := qdMetaData.cpp qd_utils.cpp
 LOCAL_CFLAGS                    := $(common_flags) -Wno-sign-conversion
 LOCAL_CFLAGS                    += -DLOG_TAG=\"DisplayMetaData\"
-
-ifneq ($(TARGET_IS_HEADLESS), true)
-LOCAL_MODULE_PATH_32          := $(TARGET_OUT_VENDOR)/lib
-LOCAL_MODULE_PATH_64          := $(TARGET_OUT_VENDOR)/lib64
-endif
-
+LOCAL_VENDOR_MODULE           := true
 LOCAL_MODULE_TAGS               := optional
 LOCAL_MODULE                    := libqdMetaData.system
 
