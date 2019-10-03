@@ -202,7 +202,8 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib/liboemcamera.so|libshims_sensormanager.so \
     /vendor/bin/slim_daemon|libshims_sensormanager.so \
     /vendor/lib/libwvhidl.so|/vendor/lib/libprotobuf-cpp-lite.so \
-    /vendor/lib/mediadrm/libwvdrmengine.so|/vendor/lib/libprotobuf-cpp-lite.so
+    /vendor/lib/mediadrm/libwvdrmengine.so|/vendor/lib/libprotobuf-cpp-lite.so \
+    /vendor/bin/hw/android.hardware.drm@1.0-service.widevine|libshim_drm.so
 
 # Testing related defines
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/bullhead-setup.sh
