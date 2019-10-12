@@ -23,7 +23,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=rome \
-    bluetooth.enable_timeout_ms=12000
+    bluetooth.enable_timeout_ms=12000 \
+    ro.boot.btmacaddr=00:00:00:00:00:00
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
