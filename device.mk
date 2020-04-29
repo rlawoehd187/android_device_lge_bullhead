@@ -79,6 +79,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.vulkan.version.xml
 
+# Additional native libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # APEX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
@@ -330,6 +334,12 @@ PRODUCT_PACKAGES += \
 # Power configuration file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.bullhead.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bullhead.power.sh
+
+
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-vendorcompat \
+    libprotobuf-cpp-lite-vendorcompat
 
 # Qseecomd configuration file
 PRODUCT_COPY_FILES += \
