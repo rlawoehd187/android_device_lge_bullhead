@@ -401,6 +401,9 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
 
+on property:init.svc.qcamerasvr=running
+    restart media
+
 on property:persist.radio.atfwd.start=false
     stop atfwd
 
