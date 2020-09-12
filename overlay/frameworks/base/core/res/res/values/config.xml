@@ -404,6 +404,9 @@
     <!-- AOSP WFD -->
     <bool name="config_enableWifiDisplay">true</bool>
 
+    <!-- Whether device supports wifi ap mac randomization -->
+    <bool name="config_wifi_ap_randomization_supported">false</bool>
+
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
