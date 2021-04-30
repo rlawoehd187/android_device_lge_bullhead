@@ -353,6 +353,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Sensor & activity_recognition HAL
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0 \
     sensors.bullhead \
     activity_recognition.bullhead \
     android.hardware.sensors@1.0-impl \
