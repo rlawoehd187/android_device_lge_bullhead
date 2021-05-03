@@ -57,3 +57,6 @@ allow init hidl_base_hwservice:hwservice_manager add;
 allow init hwservicemanager:binder { call transfer };
 allow init hal_power_service:service_manager add;
 allow init servicemanager:binder { call transfer };
+
+allow init hal_power_stats_hwservice:hwservice_manager { find };
+allow init hal_power_stats_hwservice:hwservice_manager { add };
