@@ -122,7 +122,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.default_cdma_sub=0 \
     persist.qcril.disable_retry=true \
     persist.radio.always_send_plmn=true \
