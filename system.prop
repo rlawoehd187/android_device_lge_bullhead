@@ -135,3 +135,6 @@ persist.sys.fflag.override.settings_fuse=false
 # Wifi
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=15
+
+# BPF bypass
+ro.kernel.ebpf.supported=false
