@@ -142,3 +142,6 @@ ro.kernel.ebpf.supported=false
 
 # VNDK
 ro.vndk.version=current
+
+# Xml
+persist.sys.binary_xml=false
