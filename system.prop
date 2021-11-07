@@ -139,3 +139,6 @@ wifi.supplicant_scan_interval=15
 
 # BPF bypass
 ro.kernel.ebpf.supported=false
+
+# VNDK
+ro.vndk.version=current
