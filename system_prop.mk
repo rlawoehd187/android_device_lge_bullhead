@@ -142,7 +142,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.mode_pref_nv10=1 \
     ril.nosim.ecc_list_count=1 \
     ril.nosim.ecc_list_1=111,113,117,122,125 \
-    persist.radio.redir_party_num=0
+    persist.radio.redir_party_num=0 \
+    persist.vendor.radio.rat_on=combine
 
 # SdcardFs
 PRODUCT_PROPERTY_OVERRIDES += \
