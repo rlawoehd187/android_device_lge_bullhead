@@ -26,6 +26,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.enable_timeout_ms=12000 \
     ro.boot.btmacaddr=00:00:00:00:00:00
 
+# Blur - Diable Blur in A12+
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.surface_flinger.supports_background_blur=0 \
+     ro.sf.blurs_are_expensive=0
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.eis.enable=1 \
