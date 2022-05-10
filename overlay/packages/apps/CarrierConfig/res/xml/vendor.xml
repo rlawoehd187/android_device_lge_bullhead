@@ -2183,4 +2183,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <item value="3,11,9,10,15" />
         </string-array>
     </carrier_config>
+
+    <carrier_config>
+        <!-- fixes empty signal bar when on 4G/LTE -->
+        <int name="parameters_used_for_lte_signal_bar_int" value="3" />
+    </carrier_config>
+
 </carrier_config_list>
