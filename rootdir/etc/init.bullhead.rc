@@ -88,6 +88,7 @@ on late-fs
     start servicemanager
     start surfaceflinger
     start bootanim
+    start vendor.hwcomposer-2-1
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.bullhead --late
     swapon_all /vendor/etc/fstab.bullhead
