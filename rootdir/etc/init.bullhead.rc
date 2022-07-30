@@ -401,8 +401,17 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
 
+on property:init.svc.media=restarting
+    restart qcamerasvr
+
+on property:init.svc.servicemanager=restarting
+    restart qcamerasvr
+
+on property:init.svc.qcamerasvr=restarting
+    restart cameraserver
+
 on property:init.svc.qcamerasvr=running
-    restart media
+    restart cameraserver
 
 on property:persist.radio.atfwd.start=false
     stop atfwd
@@ -464,12 +473,6 @@ service devstart_sh /vendor/bin/init.qcom.devstart.sh
 
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
-
-on property:init.svc.media=restarting
-    restart qcamerasvr
-
-on property:init.svc.servicemanager=restarting
-    restart qcamerasvr
     
 on property:vold.decrypt=trigger_restart_framework
     restart camera-provider-2-4

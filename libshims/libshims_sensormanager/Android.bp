@@ -17,11 +17,11 @@ cc_library_shared {
     name: "libshims_sensormanager",
     srcs: ["SensorManager.cpp"],
 
+    shared_libs: [
+	"libsensor",
+	"libutils"
+    ],
+
     proprietary: true,
     vendor: true,
-    arch: {
-        arm64: {
-            cflags: ["-DLIBSHIMS_64BIT"],
-        },
-    },
 }
