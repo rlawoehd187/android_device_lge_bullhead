@@ -129,7 +129,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0 \
     persist.radio.use_cc_names=true \
     persist.radio.eri64_as_home=1 \
-    persist.radio.data_con_rprt=true \
     persist.radio.rat_on=combine \
     persist.radio.data_ltd_sys_ind=1 \
     persist.radio.data_con_rprt=1 \
