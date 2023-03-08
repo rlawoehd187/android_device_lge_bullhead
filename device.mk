@@ -251,7 +251,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.devwait.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devwait.sh \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.devstart.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devstart.sh \
-    $(LOCAL_PATH)/rootdir/etc/fstab.bullhead:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.bullhead \
+    $(LOCAL_PATH)/rootdir/etc/fstab.bullhead:$(TARGET_COPY_OUT_ROOT)/fstab.bullhead \
     $(LOCAL_PATH)/rootdir/etc/fstab.bullhead:$(TARGET_COPY_OUT_RAMDISK)/fstab.bullhead
 
 # Keylayout
