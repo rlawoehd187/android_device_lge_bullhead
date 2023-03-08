@@ -384,6 +384,9 @@ endif
 PRODUCT_PACKAGES += \
     libcutils_shim
 
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
+
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep
