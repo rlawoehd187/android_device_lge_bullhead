@@ -117,7 +117,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.early.app.duration=27600000 \
     debug.sf.earlyGl.sf.duration=27600000 \
     debug.sf.earlyGl.app.duration=27600000 \
-    debug.renderengine.backend=gles
+    debug.renderengine.backend=threaded
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
