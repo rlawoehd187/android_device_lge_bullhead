@@ -24,3 +24,12 @@ LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := SensorManager.cpp
+LOCAL_MODULE := libshims_sensormanager
+LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_VENDOR_MODULE := true
+LOCAL_CFLAGS_arm64 := -DLIBSHIMS_64BIT
+include $(BUILD_SHARED_LIBRARY)
+

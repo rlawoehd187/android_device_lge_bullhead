@@ -377,7 +377,8 @@ endif
 
 # Shims
 PRODUCT_PACKAGES += \
-    libcutils_shim
+    libcutils_shim \
+    libshims_sensormanager
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
