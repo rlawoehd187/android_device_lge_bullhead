@@ -147,7 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SdcardFs
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.fflag.override.settings_fuse=false
+    persist.fuse_sdcard=true
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
