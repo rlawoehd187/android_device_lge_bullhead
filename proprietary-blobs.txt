@@ -71,14 +71,12 @@ system/etc/acdbdata/Hdmi_cal.acdb
 system/etc/acdbdata/Headset_cal.acdb
 system/etc/acdbdata/Speaker_cal.acdb
 
-/system/etc/cne/profile.txt
 /system/etc/data/dsi_config.xml
 /system/etc/data/netmgr_config.xml
 /system/etc/data/qmi_config.xml
 /system/etc/flp.conf
 /system/etc/izat.conf
 /system/etc/lowi.conf
-/system/etc/permissions/cneapiclient.xml
 /system/etc/permissions/embms.xml
 /system/etc/permissions/qcrilhook.xml
 /system/etc/permissions/qti_permissions.xml
@@ -87,7 +85,6 @@ system/etc/acdbdata/Speaker_cal.acdb
 /system/etc/qmi_fw.conf
 /system/etc/sap.conf
 /system/etc/thermal-engine-8992.conf
-/system/framework/cneapiclient.jar
 /system/framework/embmslibrary.jar
 /system/framework/qcrilhook.jar
 /system/framework/rcsimssettings.jar
