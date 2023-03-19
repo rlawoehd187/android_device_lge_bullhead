@@ -120,6 +120,17 @@ vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libscale.so
 vendor/lib64/libuiblur.so
 
+# Widevine
+vendor/lib/libdrmdecrypt.so
+vendor/lib/liboemcrypto.so
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+
+# 1.0 from oce
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine|65da8d878c199742965e40e0ab7ac5e3c3e84098
+vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
+vendor/lib/libwvhidl.so|c9a1691b18f589ad3ff0a98ff2de1f8965dc1b16
+
 /system/etc/data/dsi_config.xml
 /system/etc/data/netmgr_config.xml
 /system/etc/data/qmi_config.xml
