@@ -11,10 +11,7 @@ LOCAL_MODULE_TAGS             := optional
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libEGL liboverlay \
                                  libhdmi libqdutils libhardware_legacy \
                                  libdl libmemalloc libqservice libsync \
-                                 libbinder libmedia
-ifeq ($(TARGET_USES_QCOM_BSP),true)
-LOCAL_SHARED_LIBRARIES += libskia
-endif #TARGET_USES_QCOM_BSP
+                                 libbinder libmedia libskia
 
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdhwcomposer\" \
                                  -Wno-sign-conversion -Wno-float-conversion -Wno-sizeof-array-argument -Wno-pointer-bool-conversion
