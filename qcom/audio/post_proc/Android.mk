@@ -72,7 +72,7 @@ LOCAL_MODULE_OWNER := qcom
 LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_C_INCLUDES := \
-        hardware/qcom/audio/hal \
+        $(LOCAL_PATH)/../../../qcom/audio/hal \
 	$(call include-path-for, audio-effects)
 
 LOCAL_HEADER_LIBRARIES += libhardware_headers
@@ -109,7 +109,7 @@ LOCAL_MODULE_OWNER := google
 LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_C_INCLUDES := \
-	hardware/qcom/audio/hal \
+	$(LOCAL_PATH)/../../qcom/audio/hal \
 	system/media/audio/include/system \
 	$(call include-path-for, audio-effects)
 

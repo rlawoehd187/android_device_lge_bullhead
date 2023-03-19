@@ -47,14 +47,14 @@ include $(CLEAR_VARS)
 
 libmm-venc-inc      := $(LOCAL_PATH)/venc/inc
 libmm-venc-inc      += $(OMX_VIDEO_PATH)/vidc/common/inc
-libmm-venc-inc      += hardware/qcom/media/msm8974/mm-core/inc
-libmm-venc-inc      += hardware/qcom/media/msm8974/libstagefrighthw
+libmm-venc-inc      += $(LOCAL_PATH)/../../../../qcom/media/mm-core/inc
+libmm-venc-inc      += $(LOCAL_PATH)/../../../../qcom/media/libstagefrighthw
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/qcom/display
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/adreno
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/adreno200
 libmm-venc-inc      += frameworks/native/include/media/hardware
 libmm-venc-inc      += frameworks/native/include/media/openmax
-libmm-venc-inc      += hardware/qcom/media/msm8974/libc2dcolorconvert
+libmm-venc-inc      += $(LOCAL_PATH)/../../../../qcom/media/libc2dcolorconvert
 libmm-venc-inc      += frameworks/av/include/media/stagefright
 
 LOCAL_PROPRIETARY_MODULE        := true
@@ -92,7 +92,7 @@ include $(CLEAR_VARS)
 mm-venc-test720p-inc            := $(TARGET_OUT_HEADERS)/mm-core
 mm-venc-test720p-inc            += $(LOCAL_PATH)/venc/inc
 mm-venc-test720p-inc            += $(OMX_VIDEO_PATH)/vidc/common/inc
-mm-venc-test720p-inc            += hardware/qcom/media/msm8974/mm-core/inc
+mm-venc-test720p-inc            += $(LOCAL_PATH)/../../../../qcom/media/mm-core/inc
 mm-venc-test720p-inc            += $(TARGET_OUT_HEADERS)/qcom/display
 
 LOCAL_PROPRIETARY_MODULE        := true
@@ -124,7 +124,7 @@ LOCAL_PROPRIETARY_MODULE        := true
 LOCAL_MODULE                    := mm-video-encdrv-test
 LOCAL_MODULE_TAGS               := optional
 LOCAL_C_INCLUDES                := $(venc-test-inc)
-LOCAL_C_INCLUDES                += hardware/qcom/media/msm8974/mm-core/inc
+LOCAL_C_INCLUDES                += $(LOCAL_PATH)/../../../../qcom/media/mm-core/inc
 
 LOCAL_HEADER_LIBRARIES          := generated_kernel_headers
 
