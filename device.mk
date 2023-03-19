@@ -127,9 +127,6 @@ PRODUCT_PACKAGES += \
     libbt-vendor \
     android.hardware.bluetooth@1.0-impl
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.bt.bdaddr_path=/persist/bdaddr.txt
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images

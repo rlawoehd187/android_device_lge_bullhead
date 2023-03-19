@@ -24,7 +24,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=rome \
     bluetooth.enable_timeout_ms=12000 \
-    ro.boot.btmacaddr=00:00:00:00:00:00
+    ro.boot.btmacaddr=00:00:00:00:00:00 \
+    ro.bt.bdaddr_path=/persist/bdaddr.txt
 
 # Blur - Diable Blur in A12+
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -41,7 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.camera.notify_nfc=1
 
 # Configstore
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES +=  \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=2048 \
@@ -118,14 +119,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.wfc_avail_ovr=1
 
 # Properties for Surfaceflinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    debug.sf.use_phase_offsets_as_durations=1 \
-    debug.sf.late.sf.duration=27600000 \
-    debug.sf.late.app.duration=27600000 \
-    debug.sf.early.sf.duration=27600000 \
-    debug.sf.early.app.duration=27600000 \
-    debug.sf.earlyGl.sf.duration=27600000 \
-    debug.sf.earlyGl.app.duration=27600000 \
+PRODUCT_PROPERTY_OVERRIDES += \
     debug.renderengine.backend=threaded
 
 # RIL
