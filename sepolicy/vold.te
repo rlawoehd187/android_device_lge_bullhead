@@ -13,3 +13,4 @@ get_prop(vold, qseecomtee_prop)
 #allow vold sysfs_devices_block:dir { search read open };
 allow vold sysfs_devices_block:file write;
 allow vold sysfs:file write;
+allow vold vdc:process getattr;

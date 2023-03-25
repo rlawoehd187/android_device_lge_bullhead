@@ -41,3 +41,5 @@ r_dir_file(thermal-engine, sysfs_msm_subsys)
 r_dir_file(thermal-engine, sysfs_leds)
 
 allow thermal-engine vendor_file:dir r_dir_perms;
+
+allow thermal-engine default_prop:file { read open getattr };

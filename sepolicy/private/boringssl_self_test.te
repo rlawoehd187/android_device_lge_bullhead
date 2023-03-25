@@ -1,0 +1,4 @@
+type vendor_boringssl_self_test, domain;
+type vendor_boringssl_self_test_exec, vendor_file_type, exec_type, file_type;
+
+allow vendor_boringssl_self_test vendor_file:dir read;

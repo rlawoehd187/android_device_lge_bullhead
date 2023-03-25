@@ -55,3 +55,5 @@ allow camera proc:file r_file_perms;
 allow camera sysfs:file r_file_perms;
 
 allow camera mnt_vendor_file:dir search;
+
+allow camera default_prop:file { read open getattr };

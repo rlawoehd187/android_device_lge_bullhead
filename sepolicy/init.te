@@ -49,3 +49,11 @@ allow init firmware_file:dir mounton;
 allow init sysfs_rndis:file rw_file_perms;
 
 allow init sysfs_poweroff:file rw_file_perms;
+allow init vendor_file:file execute_no_trans;
+
+allow init hal_drm_hwservice:hwservice_manager { find add };
+allow init hidl_base_hwservice:hwservice_manager add;
+
+allow init hwservicemanager:binder { call transfer };
+allow init hal_power_service:service_manager add;
+allow init servicemanager:binder { call transfer };

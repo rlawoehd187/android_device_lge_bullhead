@@ -19,3 +19,5 @@ allow bullhead-sh shell_exec:file r_file_perms;
 
 # execute toybox/toolbox
 allow bullhead-sh toolbox_exec:file rx_file_perms;
+allow bullhead-sh radio_core_data_file:dir { read open write create add_name remove_name getattr setattr rmdir };
+allow bullhead-sh radio_core_data_file:file  { read write open create unlink getattr setattr };

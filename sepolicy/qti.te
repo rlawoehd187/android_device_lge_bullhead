@@ -31,3 +31,4 @@ allow qti vendor_file:dir r_dir_perms;
 allow qti sysfs:file rw_file_perms;
 
 #dontaudit qti kernel:system module_request;
+allow qti default_prop:file { read open getattr };

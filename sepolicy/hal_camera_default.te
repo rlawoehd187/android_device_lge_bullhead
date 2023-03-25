@@ -12,3 +12,4 @@ vndbinder_use(hal_camera_default);
 #binder_call(hal_camera_default, hal_graphics_composer)
 #binder_call(hal_camera_default, system_server)
 binder_call(hal_camera_default, servicemanager)
+allow hal_gnss_default default_prop:file { read open getattr };

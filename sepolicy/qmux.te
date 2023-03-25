@@ -27,3 +27,6 @@ allow qmux sysfs_msm_subsys:file rw_file_perms;
 allow qmux sysfs_msm_subsys:lnk_file r_file_perms;
 
 allow qmux vendor_file:dir r_dir_perms;
+
+allow qmux radio_prop:file { read open getattr };
+allow qmux default_prop:file { read open getattr };

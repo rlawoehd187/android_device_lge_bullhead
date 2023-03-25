@@ -44,3 +44,5 @@ hal_client_domain(hal_graphics_composer_default, hal_light);
 allow hal_graphics_composer_default hal_light_hwservice:hwservice_manager find;
 
 dontaudit hal_graphics_composer_default kernel:system module_request;
+allow hal_graphics_composer_default bootanim_system_prop:file { read open getattr };
+allow hal_graphics_composer_default { default_prop system_prop }:file { read open getattr };

@@ -45,3 +45,6 @@ allow rild diag_device:chr_file rw_file_perms;
 # allow rild to use qualcomm's socket ipc ioctls
 allow rild self:socket ioctl;
 allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
+allow rild default_prop:file { read open getattr };
+allow rild radio_core_data_file:file { getattr read write open ioctl lock create unlink };
+allow rild radio_core_data_file:dir { read open write add_name remove_name  };

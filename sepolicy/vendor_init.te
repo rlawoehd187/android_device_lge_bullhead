@@ -1,2 +1,18 @@
 allow vendor_init time_data_file:dir { search setattr };
 allow vendor_init time_data_file:file setattr;
+allow vendor_init { wc_transport_prop radio_prop apexd_prop system_prop }:file read;
+allow vendor_init default_prop:property_service set;
+allow vendor_init radio_core_data_file:dir { getattr setattr };
+allow vendor_init radio_core_data_file:file { write open setattr };
+allow vendor_init wifi_data_file:dir getattr;
+allow vendor_init dhcp_data_file:dir { getattr setattr };
+allow vendor_init cnd_data_file:dir getattr;
+allow vendor_init camera_data_file:dir getattr;
+allow vendor_init location_data_file:dir getattr;
+allow vendor_init audio_data_file:dir getattr;
+allow vendor_init perfd_data_file:dir { write setattr getattr remove_name };
+allow vendor_init perfd_data_file:file unlink;
+allow vendor_init ramdump_data_file:dir getattr;
+allow vendor_init diag_logs:dir getattr;
+allow vendor_init fingerprintd_data_file:dir getattr;
+allow vendor_init system_prop:file { read open getattr };

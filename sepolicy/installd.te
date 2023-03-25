@@ -1,1 +1,5 @@
 allow installd device:file rw_file_perms;
+allow installd installd:capability sys_ptrace;
+allow installd system_server:process getattr;
+allow installd system_server:dir search;
+allow installd system_server:file { read open };

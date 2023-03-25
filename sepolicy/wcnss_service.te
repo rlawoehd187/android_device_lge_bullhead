@@ -23,3 +23,4 @@ allow wcnss_service sysfs_wlan0:lnk_file { read open };
 qmux_socket(wcnss_service)
 
 allow wcnss_service vendor_file:dir r_dir_perms;
+allow wcnss_service default_prop:file { read open getattr };

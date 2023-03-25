@@ -30,3 +30,4 @@ allow hal_gnss_default hal_gnss_default:socket { read write create };
 # libqdi and have all its clients use netlink route
 # sockets.
 dontaudit hal_gnss_default self:udp_socket create;
+allow hal_gnss_default system_prop:file { read open getattr };

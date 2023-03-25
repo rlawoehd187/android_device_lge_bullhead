@@ -23,3 +23,5 @@ allow atfwd sysfs_msm_subsys:dir r_dir_perms;
 allow atfwd sysfs_msm_subsys:lnk_file r_file_perms;
 
 allow atfwd vendor_file:dir r_dir_perms;
+
+allow atfwd default_prop:file { read open getattr };

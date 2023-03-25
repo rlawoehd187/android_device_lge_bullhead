@@ -2,3 +2,6 @@ allow surfaceflinger sysfs_leds:file rw_file_perms;
 r_dir_file(surfaceflinger, sysfs_graphics)
 allow surfaceflinger debugfs_kgsl:dir { search read open };
 allow surfaceflinger debugfs_kgsl:file { read write getattr setattr };
+allow surfaceflinger bootanim:process getattr;
+allow surfaceflinger bootanim:file { read open getattr };
+allow surfaceflinger bootanim:dir search;

@@ -43,3 +43,4 @@ allow ims sysfs_msm_subsys:file rw_file_perms;
 allow ims sysfs_msm_subsys:lnk_file { read open };
 
 allow ims vendor_file:dir r_dir_perms;
+allow ims default_prop:file { read open getattr };
