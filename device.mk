@@ -254,7 +254,8 @@ PRODUCT_PACKAGES += \
     init.bullhead.ramdump.rc \
     init.bullhead.fp.rc \
     init.bullhead.diag.rc \
-    init.bullhead.misc.rc
+    init.bullhead.misc.rc \
+    init.bullhead.power.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.devwait.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devwait.sh \
@@ -337,7 +338,6 @@ PRODUCT_PACKAGES += \
 # Power configuration file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.bullhead.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bullhead.power.sh
-
 
 # Protobuf
 PRODUCT_PACKAGES += \

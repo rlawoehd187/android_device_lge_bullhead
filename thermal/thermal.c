@@ -45,7 +45,7 @@ const int CPU_SENSORS[] = {8, 8, 9, 10, 13, 14};
 // qcom, therm-reset-temp
 #define CPU_SHUTDOWN_THRESHOLD          115
 //qcom, limit-temp
-#define CPU_THROTTLING_THRESHOLD        60
+#define CPU_THROTTLING_THRESHOLD        80
 
 #define BATTERY_SHUTDOWN_THRESHOLD      60
 // vendor/lge/bullhead/proprietary/thermal-engine/thermal-engine-8992.conf

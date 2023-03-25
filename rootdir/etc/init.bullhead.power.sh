@@ -68,6 +68,7 @@ write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "65 460800:7
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 80000
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 384000
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1440000
 
 # online CPU4
 write /sys/devices/system/cpu/cpu4/online 1
@@ -86,6 +87,7 @@ write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "70 960000:8
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 80000
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 384000
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1824000
 
 # restore A57's max
 copy /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_max_freq /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
@@ -97,7 +99,7 @@ write /sys/devices/system/cpu/cpu5/online 1
 write /sys/module/msm_performance/parameters/cpu_max_freq "4:4294967295 5:4294967295"
 
 # input boost configuration
-write /sys/module/cpu_boost/parameters/input_boost_freq "0:960000"
+write /sys/module/cpu_boost/parameters/input_boost_freq "0:1248000 2:1248000"
 write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
 # Setting B.L scheduler parameters
@@ -119,11 +121,13 @@ get-set-forall  /sys/class/devfreq/qcom,cpubw*/governor bw_hwmon
 write /proc/sys/kernel/sched_boost 0
 
 # re-enable thermal and BCL hotplug
-write /sys/module/msm_thermal/core_control/enabled 1
+#write /sys/module/msm_thermal/core_control/enabled 1
+
+# thermal customize
+write /sys/module/msm_thermal/core_control/enabled 0
+write /sys/module/msm_thermal/parameters/enabled Y
+write /sys/module/msm_thermal/parameters/temp_threshold 80
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode disable
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_mask $bcl_hotplug_mask
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask $bcl_hotplug_soc_mask
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode enable
-
-# set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
-write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
